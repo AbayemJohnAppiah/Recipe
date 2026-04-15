@@ -1,0 +1,243 @@
+header {
+  font-family: 'Arial', sans-serif;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  top: 0;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+}
+
+.page-name {
+  font-size: 1.5em;
+  background: linear-gradient(to right, #FF5733, #f5deb3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#home,
+#recipes,
+#drinks,
+#about,
+#categories {
+  display: inline-block;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+#home:hover,
+#recipes:hover,
+#drinks:hover,
+#about:hover {
+  background-color: #fc390e;
+  transform: translateY(-3px);
+}
+
+#home:active,
+#recipes:active,
+#drinks:active,
+#about:active {
+  background-color: #f9795d;
+}
+
+/* Categories*/
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+header ul li {
+  display: inline-block;
+  position: relative;
+  /* IMPORTANT */
+}
+
+/* hide dropdown */
+header ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FF5733;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* show dropdown on hover */
+header ul li:hover ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* dropdown links */
+header ul li ul li {
+  display: block;
+}
+
+header ul li ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header ul li ul li a:hover {
+  text-decoration: underline;
+  color: wheat;
+}
+
+/* main link */
+#categories {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+a i {
+  margin-left: 5px;
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  background: linear-gradient(to right, #FF5733, #f5deb3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 📱 MOBILE STYLE */
+@media (max-width: 768px) {
+
+  header {
+    padding: 30px 12px;
+  }
+
+  .page-name {
+    font-size: 0.9em;
+    margin-right: 6px;
+  }
+
+  header h1 img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Hide desktop links */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    width: 150px;
+    display: none;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Fix dropdown inside mobile */
+  header ul {
+    display: block;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  header ul li ul {
+    position: static;
+    display: none;
+    background: none;
+    padding: 5px 0;
+  }
+
+  header ul li ul li a {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* hide dropdown by default */
+  header .categorie-links {
+    display: none;
+  }
+
+  /* show when active */
+  header .categorie-links.active {
+    display: block;
+  }
+
+  #home,
+  #recipes,
+  #drinks,
+  #about,
+  #categories {
+    display: inline-block;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    width: 100px;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 15%;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+
+  header ul li:hover ul {
+    display: none
+  }
+
+  header ul li ul li a:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
