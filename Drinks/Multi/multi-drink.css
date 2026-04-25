@@ -1,0 +1,194 @@
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  background: linear-gradient(to right, #FF5733, #f5deb3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+}
+
+.title-container {
+  background-color: white;
+  margin: 0;
+}
+
+.all-recipe {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.food-container {
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  box-shadow: 0 0.5px 3px #FF5733;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.all-recipe h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.food-container h3,
+.food-container h5 {
+  background: linear-gradient(to right, #FF5733, #f5deb3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.food-container a {
+  background-color: #FF5733;
+  padding: 2px 10px;
+  color: white;
+  margin-top: auto;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.food-container a:hover {
+  background-color: #ff7d60;
+}
+
+.food-container a:active {
+  background-color: #ff2f00;
+}
+
+.food-text {
+  margin-top: 20px;
+}
+
+.food-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+#food1-image {
+  background-image: url("https://i.pinimg.com/1200x/9f/90/ed/9f90ede9c8fa4ce7222bed60826bd67d.jpg");
+}
+
+#food2-image {
+  background-image: url("https://i.pinimg.com/736x/ad/3e/4c/ad3e4cf1389c9186b8292a9b8c0d2263.jpg");
+}
+
+#food3-image {
+  background-image: url("https://i.pinimg.com/1200x/b4/da/a3/b4daa3b7088350f908cc2d760625614b.jpg");
+}
+
+#food4-image {
+  background-image: url("https://i.pinimg.com/736x/ef/39/2c/ef392cc0d383598c38a4d7045212f2e4.jpg");
+}
+
+#food5-image {
+  background-image: url("https://i.pinimg.com/1200x/ff/d5/bb/ffd5bb1d088a4c48fc59f8698682db01.jpg");
+}
+
+#food6-image {
+  background-image: url("https://i.pinimg.com/1200x/c0/ad/f0/c0adf0654fbd455bcc9107a058ddc160.jpg");
+}
+
+#food7-image {
+  background-image: url("https://i.pinimg.com/1200x/54/00/32/540032d228ee9e1db883564d6b0b75a5.jpg");
+}
+
+#food8-image {
+  background-image: url("https://i.pinimg.com/1200x/c7/c2/cf/c7c2cf6b26ded71e56c7e77b5de0b715.jpg");
+}
+
+#food9-image {
+  background-image: url("https://i.pinimg.com/736x/3e/27/b3/3e27b3249c423786fc755ad21b50abae.jpg");
+}
+
+#food10-image {
+  background-image: url("https://i.pinimg.com/736x/7a/97/fd/7a97fd291c2416dff6aa29e55088bc2c.jpg");
+}
+
+#food11-image {
+  background-image: url("https://i.pinimg.com/736x/78/bf/f3/78bff349aa5c414544bba43dbb5c1e95.jpg");
+}
+
+#food12-image {
+  background-image: url("https://i.pinimg.com/736x/f4/0d/22/f40d224ff8df30c8b991f308b91be137.jpg");
+}
+
+#food13-image {
+  background-image: url("https://i.pinimg.com/736x/c1/62/d7/c162d7fcfbee5f33d1c02ce2345bba75.jpg");
+}
+
+#food14-image {
+  background-image: url("https://i.pinimg.com/736x/68/49/77/684977be228d2965268808bbe632cdbe.jpg");
+}
+
+#food15-image {
+  background-image: url("https://i.pinimg.com/736x/62/02/58/6202583a4290b24f7cad0d95a039301f.jpg");
+}
+
+#food16-image {
+  background-image: url("https://i.pinimg.com/1200x/07/61/8a/07618a34682837e6026c9be2984ab540.jpg");
+}
+
+@media (max-width: 768px) {
+  .title {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 0px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+  }
+
+  .title-container {
+    background-color: black;
+  }
+
+  .all-recipe {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .food-container {
+    width: 150px;
+    height: 250px;
+  }
+
+  .all-recipe h3 {
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  .all-recipe h5 {
+    font-size: 0.7em;
+  }
+
+  .food-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .food-text {
+    padding: 0 2px;
+    margin-top: 5px;
+  }
+
+  .food-container a {
+    margin-top: auto;
+    font-size: 1.5em;
+    border-radius: 5px;
+  }
+}
